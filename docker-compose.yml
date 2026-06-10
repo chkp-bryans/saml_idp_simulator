@@ -21,15 +21,15 @@ services:
       # tab to a unique random value (e.g. `openssl rand -base64 48`). If left
       # unset, the app generates one on first boot and persists it to the data
       # volume (/app/data/.secret-key) so it stays stable across redeploys.
-      - ADMIN_USERNAME=admin@cpdemo.ca
+      - ADMIN_USERNAME=admin@csadocs.com
       # ADMIN_PASSWORD intentionally NOT set here so the app uses its baked-in
       # default 'CpDemo2026' on first boot. The admin should change it from
       # Settings → Change Admin Password after first login (persisted to
       # /app/data/.admin-password-hash on the saml_idp_data volume). To lock
       # in a specific value at deploy time instead, add ADMIN_PASSWORD to the
       # Dokploy Environment tab.
-      - IDP_ENTITY_ID=https://idp.cpdemo.ca
-      - SSO_SERVICE_URL=https://idp.cpdemo.ca/sso
+      - IDP_ENTITY_ID=https://idp.csadocs.com
+      - SSO_SERVICE_URL=https://sso.csadocs.com
     volumes:
       - saml_idp_data:/app/data
       - saml_idp_certs:/app/app/certs
