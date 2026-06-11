@@ -29,7 +29,7 @@ services:
       # in a specific value at deploy time instead, add ADMIN_PASSWORD to the
       # Dokploy Environment tab.
       - IDP_ENTITY_ID=https://idp.csadocs.com
-      - SSO_SERVICE_URL=https://sso.csadocs.com
+      - SSO_SERVICE_URL=https://idp.csadocs.com/sso
     volumes:
       - saml_idp_data:/app/data
       - saml_idp_certs:/app/app/certs
